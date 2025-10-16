@@ -145,7 +145,7 @@ class Boy:
                 self.SLEEP : { space_down: self.IDLE},
                 self.IDLE : {right_up : self.RUN, left_up : self.RUN,left_down : self.RUN, right_down : self.RUN,time_out : self.SLEEP, auto_run : self.AUTO_RUN},
                 self.RUN : {right_down : self.IDLE, left_down : self.IDLE,left_up : self.IDLE, right_up : self.IDLE},
-                self.AUTO_RUN : {time_out : self.IDLE }
+                self.AUTO_RUN : {left_down : self.RUN, right_down : self.RUN, time_out : self.IDLE }
             }
         )
 
