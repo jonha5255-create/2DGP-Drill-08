@@ -28,7 +28,7 @@ class Auto_Run:
         self.boy = boy
 
     def enter(self,e):
-        self.boy.dir = 0
+        self.boy.dir = -1
         self.boy.auto_run_start_time = get_time()
 
     def exit(self, e):
@@ -42,9 +42,9 @@ class Auto_Run:
 
     def draw(self):
         if self.boy.face_dir == 1: # right
-            self.boy.image.clip_draw(self.boy.frame * 100, 300, 100, 100, self.boy.x, self.boy.y,100,100)
+            self.boy.image.clip_draw(self.boy.frame * 100, 100, 100, 100, self.boy.x, self.boy.y,)
         else: # face_dir == -1: # left
-            self.boy.image.clip_draw(self.boy.frame * 100, 200, 100, 100, self.boy.x, self.boy.y,100,100)
+            self.boy.image.clip_draw(self.boy.frame * 100, 0, 100, 100, self.boy.x, self.boy.y)
 
 
 class Run:
